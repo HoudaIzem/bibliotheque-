@@ -1,0 +1,19 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Type>
+ */
+class TypeFactory extends Factory
+{
+    public function definition(): array
+    {
+        $name = $this->faker->unique()->randomElement(['Audio', 'Ebook', 'Texte', 'Video', 'Image']);
+        return [
+            'name' => $name,
+        ];
+    }
+}
